@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "quanlybanhang"; 
 
-// 1. Tạo kết nối
+// Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Kiểm tra kết nối
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-// 2. Tạo bảng
+// Tạo bảng
 
 $sql = "CREATE TABLE San_Pham (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -22,7 +22,7 @@ $sql = "CREATE TABLE San_Pham (
     ngay_tao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
-// 3. Thực thi câu lệnh
+// Thực thi câu lệnh
 if ($conn->query($sql) === TRUE) {
     echo "Thành công! Đã tạo bảng 'San_Pham'";
 } else {
