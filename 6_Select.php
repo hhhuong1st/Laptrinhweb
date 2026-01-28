@@ -10,7 +10,7 @@ $conn->set_charset("utf8");
 $sql = "SELECT id, ten_san_pham, gia_tien, ngay_tao FROM San_Pham";
 $result = $conn->query($sql);
 
-// Bắt đầu vẽ bảng HTML
+
 echo "<table border='1' cellpadding='10' style='border-collapse: collapse; width: 50%;'>";
 echo "<tr style='background-color: #f2f2f2;'> 
         <th>Mã ID</th> 

@@ -2,9 +2,9 @@
 // 1. Khai báo thông tin máy chủ
 $servername = "localhost";
 $username = "root";
-$password = ""; // XAMPP mặc định mật khẩu rỗng
+$password = ""; 
 
-// 2. Kết nối đến MySQL (Chưa có tên database ở đây)
+// 2. Kết nối đến MySQL 
 $conn = new mysqli($servername, $username, $password);
 
 // Kiểm tra xem kết nối có lỗi không
@@ -12,8 +12,7 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-// 3. Viết lệnh tạo Database tên là "quanly_banhang"
-// Bạn có thể đổi tên "quanly_banhang" thành tên bạn thích
+// 3. Viết lệnh tạo Database
 $sql = "CREATE DATABASE quanlybanhang";
 
 if ($conn->query($sql) === TRUE) {

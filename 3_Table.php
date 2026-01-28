@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "quanlybanhang"; // Nhớ phải chọn đúng Database đã tạo
+$dbname = "quanlybanhang"; 
 
 // 1. Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,8 +12,8 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-// 2. Câu lệnh SQL để tạo bảng tên là "San_Pham"
-// Dưới đây là định nghĩa các cột (ngăn chứa)
+// 2. Tạo bảng
+
 $sql = "CREATE TABLE San_Pham (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     ten_san_pham VARCHAR(50) NOT NULL,
